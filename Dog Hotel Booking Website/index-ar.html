@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ليفينغ هومز – فندق الكلاب الفاخر. إقامة متميزة، علاجات سبا، ورعاية على مدار الساعة." />
+  <title>ليفينغ هومز – فندق الكلاب الفاخر</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" /></noscript>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>" />
+</head>
+<body>
+
+<div id="loading-screen" role="status" aria-label="جارٍ التحميل">
+  <div class="loading-paw">🐾</div>
+  <div class="loading-logo">ليفينغ هومز</div>
+  <div class="loading-bar"><div class="loading-bar-fill"></div></div>
+</div>
+
+<aside id="access-toolbar" role="complementary" aria-label="أدوات الإتاحة">
+  <span class="access-label" aria-hidden="true">إتاحة</span>
+  <button class="access-btn" id="acc-increase" title="تكبير النص" aria-label="تكبير حجم النص">A+</button>
+  <button class="access-btn" id="acc-decrease" title="تصغير النص" aria-label="تصغير حجم النص">A-</button>
+  <button class="access-btn" id="acc-contrast" title="تباين عالي" aria-label="تبديل التباين العالي">◑</button>
+  <button class="access-btn" id="acc-dark" title="الوضع الداكن" aria-label="تبديل الوضع الداكن">🌙</button>
+  <button class="access-btn" id="acc-tts" title="النص إلى كلام" aria-label="تشغيل قارئ الشاشة">🔊</button>
+</aside>
+
+<header>
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index-ar.html" class="nav-logo" aria-label="Living Homes Luxury Dog Hotel">
+      <span class="nav-logo-main">Living Homes</span>
+      <span class="nav-logo-sub">فندق الكلاب الفاخر</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#services">الخدمات</a></li>
+      <li><a href="#packages">الباقات</a></li>
+      <li><a href="#gallery">المعرض</a></li>
+      <li><a href="#testimonials">التقييمات</a></li>
+      <li><a href="#blog">القصص</a></li>
+      <li><a href="#contact">تواصل</a></li>
+      <li><a href="#booking" class="nav-cta">احجز الآن</a></li>
+    </ul>
+    <a href="index.html" class="lang-toggle" aria-label="Switch to English">EN</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <nav class="nav-mobile" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <button class="nav-mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
+    <a href="#services">الخدمات</a>
+    <a href="#packages">الباقات</a>
+    <a href="#gallery">المعرض</a>
+    <a href="#testimonials">التقييمات</a>
+    <a href="#blog">القصص</a>
+    <a href="#contact">تواصل</a>
+    <a href="#booking">احجز الآن</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- البطل -->
+<section id="hero" aria-label="البطل">
+  <div class="hero-slides" aria-hidden="true">
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🏅 &nbsp;أفضل فندق فاخر للحيوانات الأليفة 2026</div>
+    <h1 class="hero-title">
+      <span>حيث يشعر كلبك</span>
+      <em>وكأنه في بيته</em>
+    </h1>
+    <p class="hero-desc">إقامة فاخرة وعلاجات سبا عالمية المستوى ورعاية شخصية على مدار الساعة — لأن رفيقك الحبيب يستحق أفضل ما هو موجود.</p>
+    <div class="hero-buttons">
+      <a href="#booking" class="btn-primary">🐾 &nbsp;احجز إقامة</a>
+      <a href="#services" class="btn-outline">استكشف خدماتنا ←</a>
+    </div>
+  </div>
+  <div class="hero-dots" role="tablist">
+    <button class="hero-dot" role="tab" aria-label="شريحة 1"></button>
+    <button class="hero-dot" role="tab" aria-label="شريحة 2"></button>
+    <button class="hero-dot" role="tab" aria-label="شريحة 3"></button>
+  </div>
+  <div class="hero-scroll" aria-hidden="true"><div class="hero-scroll-line"></div><span>مرر</span></div>
+</section>
+
+<!-- الإحصاءات -->
+<section id="stats-bar" aria-label="الإنجازات">
+  <div class="stats-inner">
+    <div class="stat-item" data-reveal>
+      <span class="stat-number" data-counter data-target="2500" data-suffix="+">0</span>
+      <span class="stat-label">كلب سعيد استضفناه</span>
+    </div>
+    <div class="stat-item" data-reveal data-delay="100">
+      <span class="stat-number" data-counter data-target="8" data-suffix=" سنوات">0</span>
+      <span class="stat-label">سنوات من التميز</span>
+    </div>
+    <div class="stat-item" data-reveal data-delay="200">
+      <span class="stat-number" data-counter data-target="98" data-suffix="%">0</span>
+      <span class="stat-label">تقييمات 5 نجوم</span>
+    </div>
+    <div class="stat-item" data-reveal data-delay="300">
+      <span class="stat-number" data-counter data-target="24" data-suffix="/7">0</span>
+      <span class="stat-label">دعم بيطري</span>
+    </div>
+  </div>
+</section>
+
+<!-- الفيديو -->
+<section id="video-section" aria-labelledby="video-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">تجربة لا تُنسى</span>
+    <h2 class="section-title" id="video-heading">تجربة فندق الكلاب</h2>
+    <p class="section-desc">شاهد كيف يستمتع الكلاب بإقامتهم في Living Homes — بهجة حقيقية، رفاهية، ورعاية بلا حدود.</p>
+  </div>
+  <div class="video-wrapper" data-reveal>
+    <div class="video-container">
+      <div class="video-thumb" id="video-thumb" role="button" tabindex="0" aria-label="تشغيل الفيديو">
+        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1400&q=80" alt="كلاب سعيدة في Living Homes" class="video-thumb-img" />
+        <div class="video-thumb-overlay"></div>
+        <div class="video-play-btn" aria-hidden="true"><div class="video-play-icon">▶</div></div>
+        <div class="video-thumb-label"><span class="video-thumb-title">▶ &nbsp;شاهد قصتنا</span></div>
+      </div>
+      <div class="video-responsive-wrap" id="video-iframe-wrap">
+        <iframe id="yt-iframe" src="about:blank" title="فندق Living Homes للكلاب" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="video-features">
+      <div class="video-feature-item" data-reveal data-delay="0"><span class="video-feature-icon">🏡</span><span>أجنحة فاخرة</span></div>
+      <div class="video-feature-item" data-reveal data-delay="100"><span class="video-feature-icon">🌿</span><span>ملاعب طبيعية</span></div>
+      <div class="video-feature-item" data-reveal data-delay="200"><span class="video-feature-icon">❤️</span><span>رعاية متخصصة</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- الحجز -->
+<section id="booking" aria-labelledby="booking-heading">
+  <div class="booking-inner">
+    <div class="booking-text" data-reveal="right">
+      <span class="section-label">الحجوزات</span>
+      <h2 class="section-title" id="booking-heading">احجز الإقامة المثالية لكلبك</h2>
+      <p class="section-desc">تحقق من التوفر في ثوانٍ. يراجع فريقنا كل حجز شخصياً لضمان أفضل تجربة.</p>
+      <ul class="booking-features" role="list">
+        <li class="booking-feature"><span class="booking-feature-icon">🔒</span>حجز آمن وسهل عبر الإنترنت</li>
+        <li class="booking-feature"><span class="booking-feature-icon">📋</span>سياسة إلغاء مرنة</li>
+        <li class="booking-feature"><span class="booking-feature-icon">💌</span>تحديثات يومية بالصور ومقاطع الفيديو</li>
+        <li class="booking-feature"><span class="booking-feature-icon">🏥</span>فحص بيطري عند تسجيل الدخول</li>
+      </ul>
+    </div>
+    <div class="booking-form-card" data-reveal="left">
+      <h3 class="booking-form-title">تحقق من التوفر</h3>
+      <p class="booking-form-sub">أدخل التفاصيل أدناه — التقويم يبدأ من 1 مارس 2026</p>
+      <form id="booking-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="checkin">تاريخ الوصول</label>
+            <input type="text" id="checkin" name="checkin" placeholder="اختر تاريخ الوصول" readonly required />
+          </div>
+          <div class="form-group">
+            <label for="checkout">تاريخ المغادرة</label>
+            <input type="text" id="checkout" name="checkout" placeholder="اختر تاريخ المغادرة" readonly required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="dogs">عدد الكلاب</label>
+            <select id="dogs" name="dogs" required>
+              <option value="">اختر</option>
+              <option value="1">كلب واحد</option>
+              <option value="2">كلبان</option>
+              <option value="3">3 كلاب</option>
+              <option value="4">4 كلاب أو أكثر</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pkg">الباقة</label>
+            <select id="pkg" name="pkg" required>
+              <option value="">اختر الباقة</option>
+              <option value="essential">الإقامة الأساسية – 45 د.أ</option>
+              <option value="comfort">جناح المريح – 85 د.أ</option>
+              <option value="luxury">فيلا الفخامة – 150 د.أ</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row full">
+          <div class="form-group">
+            <label for="dog-name">اسم الكلب</label>
+            <input type="text" id="dog-name" name="dog-name" placeholder="مثال: بادي، لونا..." />
+          </div>
+        </div>
+        <button type="submit" class="btn-book"><span>🔍 &nbsp;تحقق من التوفر</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- الخدمات -->
+<section id="services" aria-labelledby="services-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">ما نقدمه</span>
+    <h2 class="section-title" id="services-heading">خدمات متميزة لكلبك</h2>
+    <p class="section-desc">كل خدمة مصممة لإبقاء كلبك سعيداً وبصحة جيدة ومحبوباً باستمرار.</p>
+  </div>
+  <div class="services-grid">
+    <article class="service-card" data-reveal data-delay="0" tabindex="0">
+      <div class="service-icon">🚶</div>
+      <h3 class="service-title">التمشية اليومية</h3>
+      <p class="service-desc">تمشيات يومية منظمة في ممراتنا الطبيعية الخاصة بإشراف مدربين معتمدين. تمرين واستكشاف وهواء نقي كل يوم.</p>
+    </article>
+    <article class="service-card" data-reveal data-delay="80" tabindex="0">
+      <div class="service-icon">🛁</div>
+      <h3 class="service-title">التزيين والسبا</h3>
+      <p class="service-desc">جلسات تزيين كاملة تشمل الاستحمام بالشامبوهات الفاخرة وتجفيف الشعر وقص الأظافر وتصفيف الشعر من قِبل متخصصين.</p>
+    </article>
+    <article class="service-card" data-reveal data-delay="160" tabindex="0">
+      <div class="service-icon">📡</div>
+      <h3 class="service-title">مراقبة الحيوانات 24/7</h3>
+      <p class="service-desc">كاميرات HD في جميع الأجنحة. تابع نشاطات كلبك لحظة بلحظة عبر تطبيقنا مع تقارير يومية بالصور ومقاطع الفيديو.</p>
+    </article>
+    <article class="service-card" data-reveal data-delay="0" tabindex="0">
+      <div class="service-icon">🌿</div>
+      <h3 class="service-title">منطقة اللعب الخارجية</h3>
+      <p class="service-desc">مساحات خارجية واسعة ومسيّجة بأمان تحتوي على معدات رياضية وبرك مائية وهياكل تسلق للكلاب النشيطة.</p>
+    </article>
+    <article class="service-card" data-reveal data-delay="80" tabindex="0">
+      <div class="service-icon">🚐</div>
+      <h3 class="service-title">خدمة الاستلام والتوصيل</h3>
+      <p class="service-desc">نقل فاخر من الباب إلى الباب في مركبات مكيّفة. متاح في نطاق 30 كم من موقعنا.</p>
+    </article>
+    <article class="service-card" data-reveal data-delay="160" tabindex="0">
+      <div class="service-icon">🏥</div>
+      <h3 class="service-title">رعاية بيطرية 24/7</h3>
+      <p class="service-desc">عيادة بيطرية مجهزة بالكامل تعمل على مدار الساعة. فحوصات صحية روتينية ورعاية طارئة متاحة دائماً.</p>
+    </article>
+  </div>
+</section>
+
+<!-- الباقات -->
+<section id="packages" aria-labelledby="packages-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">خيارات الإقامة</span>
+    <h2 class="section-title" id="packages-heading">اختر الباقة المثالية</h2>
+    <p class="section-desc">ثلاثة خيارات إقامة مُعدّة بعناية، كل منها يوفر راحة ورعاية استثنائية.</p>
+  </div>
+  <div class="packages-grid">
+    <article class="package-card" data-reveal data-delay="0" tabindex="0">
+      <h3 class="package-name">الإقامة الأساسية</h3>
+      <div class="package-price"><span class="package-amount">45</span><span class="package-period">&nbsp;د.أ / ليلة</span></div>
+      <div class="package-divider"></div>
+      <ul class="package-features" role="list">
+        <li class="package-feature"><span class="package-check">✓</span>غرفة خاصة مريحة (10 م²)</li>
+        <li class="package-feature"><span class="package-check">✓</span>طعام كلاب فاخر مُدرج</li>
+        <li class="package-feature"><span class="package-check">✓</span>تمشيتان يومياً</li>
+        <li class="package-feature"><span class="package-check">✓</span>جلسات لعب جماعية</li>
+        <li class="package-feature"><span class="package-check">✓</span>فحص صحي يومي</li>
+      </ul>
+      <button class="btn-package" aria-label="اختر الإقامة الأساسية">اختر الباقة</button>
+    </article>
+    <article class="package-card featured" data-reveal data-delay="100" tabindex="0">
+      <div class="package-badge">الأكثر شعبية</div>
+      <h3 class="package-name">جناح المريح</h3>
+      <div class="package-price"><span class="package-amount">85</span><span class="package-period">&nbsp;د.أ / ليلة</span></div>
+      <div class="package-divider"></div>
+      <ul class="package-features" role="list">
+        <li class="package-feature"><span class="package-check">✓</span>جناح فسيح (20 م²) مع أريكة</li>
+        <li class="package-feature"><span class="package-check">✓</span>وجبات فاخرة وحلويات</li>
+        <li class="package-feature"><span class="package-check">✓</span>3 تمشيات خاصة يومياً</li>
+        <li class="package-feature"><span class="package-check">✓</span>جلسة تزيين مُدرجة</li>
+        <li class="package-feature"><span class="package-check">✓</span>وصول لكاميرا مباشرة</li>
+        <li class="package-feature"><span class="package-check">✓</span>تقارير صور يومية</li>
+      </ul>
+      <button class="btn-package" aria-label="اختر جناح المريح">اختر الباقة</button>
+    </article>
+    <article class="package-card" data-reveal data-delay="200" tabindex="0">
+      <h3 class="package-name">فيلا الفخامة</h3>
+      <div class="package-price"><span class="package-amount">150</span><span class="package-period">&nbsp;د.أ / ليلة</span></div>
+      <div class="package-divider"></div>
+      <ul class="package-features" role="list">
+        <li class="package-feature"><span class="package-check">✓</span>فيلا خاصة (40 م²) + حديقة</li>
+        <li class="package-feature"><span class="package-check">✓</span>خدمة مساعد شخصي</li>
+        <li class="package-feature"><span class="package-check">✓</span>تمشيات ولعب غير محدودة</li>
+        <li class="package-feature"><span class="package-check">✓</span>سبا كامل وتدليك</li>
+        <li class="package-feature"><span class="package-check">✓</span>خطة غذائية مخصصة</li>
+        <li class="package-feature"><span class="package-check">✓</span>خدمة الاستلام والتوصيل مُدرجة</li>
+        <li class="package-feature"><span class="package-check">✓</span>أولوية الوصول للطبيب البيطري</li>
+      </ul>
+      <button class="btn-package" aria-label="اختر فيلا الفخامة">اختر الباقة</button>
+    </article>
+  </div>
+</section>
+
+<!-- المعرض -->
+<section id="gallery" aria-labelledby="gallery-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">معرض الصور</span>
+    <h2 class="section-title" id="gallery-heading">لمحة من حياة سعيدة</h2>
+    <p class="section-desc">لحظات حقيقية التُقطت في Living Homes — فرح وراحة وحب غير مشروط.</p>
+  </div>
+  <div class="gallery-grid" role="list">
+    <figure class="gallery-item" role="listitem" tabindex="0" aria-label="كلب سعيد يلعب في الهواء الطلق">
+      <img decoding="async" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=900&q=80" alt="كلب ذهبي سعيد في حديقة مشمسة" loading="lazy" />
+      <div class="gallery-overlay" aria-hidden="true"><div class="gallery-zoom">⊕</div></div>
+    </figure>
+    <figure class="gallery-item" role="listitem" tabindex="0" aria-label="كلاب تتفاعل مع بعض">
+      <img decoding="async" src="https://images.unsplash.com/photo-1601758124277-3fa74ac18ede?w=600&q=80" alt="كلبان يلعبان معاً" loading="lazy" />
+      <div class="gallery-overlay" aria-hidden="true"><div class="gallery-zoom">⊕</div></div>
+    </figure>
+    <figure class="gallery-item" role="listitem" tabindex="0" aria-label="كلب في الطبيعة">
+      <img decoding="async" src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=600&q=80" alt="كلب فروي في نزهة بالطبيعة" loading="lazy" />
+      <div class="gallery-overlay" aria-hidden="true"><div class="gallery-zoom">⊕</div></div>
+    </figure>
+    <figure class="gallery-item" role="listitem" tabindex="0" aria-label="كلاب تتمشى معاً">
+      <img decoding="async" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=900&q=80" alt="كلبان يركضان بسعادة" loading="lazy" />
+      <div class="gallery-overlay" aria-hidden="true"><div class="gallery-zoom">⊕</div></div>
+    </figure>
+    <figure class="gallery-item" role="listitem" tabindex="0" aria-label="تزيين الكلب">
+      <img decoding="async" src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&q=80" alt="كلب يُزيَّن باحترافية" loading="lazy" />
+      <div class="gallery-overlay" aria-hidden="true"><div class="gallery-zoom">⊕</div></div>
+    </figure>
+    <figure class="gallery-item" role="listitem" tabindex="0" aria-label="كلب يرتاح">
+      <img decoding="async" src="https://images.unsplash.com/photo-1504595403659-9088ce801e29?w=600&q=80" alt="كلب مرتاح على سرير دافئ" loading="lazy" />
+      <div class="gallery-overlay" aria-hidden="true"><div class="gallery-zoom">⊕</div></div>
+    </figure>
+  </div>
+</section>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="عارض الصور">
+  <button class="lightbox-close" id="lightbox-close" aria-label="إغلاق">✕</button>
+  <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="السابق">›</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+  <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="التالي">‹</button>
+</div>
+
+<!-- التقييمات -->
+<section id="testimonials" aria-labelledby="testimonials-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">عائلات سعيدة</span>
+    <h2 class="section-title" id="testimonials-heading">ماذا يقول أصحاب الكلاب</h2>
+    <p class="section-desc">تقييمات حقيقية من أصحاب حقيقيين يثقون بنا في رعاية أعز ما يملكون.</p>
+  </div>
+  <div class="testimonials-wrapper">
+    <div class="testimonials-track" role="list">
+      <article class="testimonial-card" role="listitem">
+        <div class="testimonial-stars" aria-label="5 نجوم">★★★★★</div>
+        <blockquote class="testimonial-text">«كنت قلقة عند ترك ماكس للمرة الأولى، لكن الفريق أرسل لنا صوراً كل بضع ساعات. عاد مزيَّناً وسعيداً ويبدو رائعاً!»</blockquote>
+        <div class="testimonial-author"><div class="testimonial-avatar">👩</div><div><div class="testimonial-name">سارة ميتشيل</div><div class="testimonial-dog">صاحبة ماكس، كلب ريتريفر ذهبي</div></div></div>
+      </article>
+      <article class="testimonial-card" role="listitem">
+        <div class="testimonial-stars" aria-label="5 نجوم">★★★★★</div>
+        <blockquote class="testimonial-text">«باقة فيلا الفخامة تستحق كل دينار بالتأكيد. كان لدى لونا حديقتها الخاصة ومرافق شخصي. لم تكن تريد العودة للبيت!»</blockquote>
+        <div class="testimonial-author"><div class="testimonial-avatar">👨</div><div><div class="testimonial-name">جيمس هارينغتون</div><div class="testimonial-dog">صاحب لونا، هاسكي</div></div></div>
+      </article>
+      <article class="testimonial-card" role="listitem">
+        <div class="testimonial-stars" aria-label="5 نجوم">★★★★★</div>
+        <blockquote class="testimonial-text">«طاقم عمل محترف ودافئ ومحب حقاً. تشارلي لديه احتياجات غذائية معقدة وقد تعاملوا مع كل شيء بشكل مثالي. حجزت بالفعل للشهر القادم!»</blockquote>
+        <div class="testimonial-author"><div class="testimonial-avatar">👩</div><div><div class="testimonial-name">إيميلي تشن</div><div class="testimonial-dog">صاحبة تشارلي، بولدوغ فرنسي</div></div></div>
+      </article>
+      <article class="testimonial-card" role="listitem">
+        <div class="testimonial-stars" aria-label="5 نجوم">★★★★★</div>
+        <blockquote class="testimonial-text">«Living Homes غيّر طريقة سفري. معرفة أن بيلا آمنة ومتمرنة ومحبوبة أثناء غيابي يحدث فارقاً كبيراً.»</blockquote>
+        <div class="testimonial-author"><div class="testimonial-avatar">👨</div><div><div class="testimonial-name">ديفيد أوكافور</div><div class="testimonial-dog">صاحب بيلا، لابرادور</div></div></div>
+      </article>
+      <article class="testimonial-card" role="listitem">
+        <div class="testimonial-stars" aria-label="5 نجوم">★★★★★</div>
+        <blockquote class="testimonial-text">«وصول الكاميرا المباشرة فكرة عبقرية. شاهدت روكي يلعب مع الكلاب الأخرى عبر التطبيق طوال رحلتي العملية. راحة بال مطلقة!»</blockquote>
+        <div class="testimonial-author"><div class="testimonial-avatar">👩</div><div><div class="testimonial-name">بريا شارما</div><div class="testimonial-dog">صاحبة روكي، بيغل</div></div></div>
+      </article>
+    </div>
+    <div class="testimonials-controls" role="group" aria-label="التنقل بين التقييمات">
+      <button class="testi-btn" id="testi-prev" aria-label="السابق">›</button>
+      <div class="testi-dots" role="tablist">
+        <button class="testi-dot active" role="tab" aria-label="1"></button>
+        <button class="testi-dot" role="tab" aria-label="2"></button>
+        <button class="testi-dot" role="tab" aria-label="3"></button>
+      </div>
+      <button class="testi-btn" id="testi-next" aria-label="التالي">‹</button>
+    </div>
+  </div>
+</section>
+
+<!-- المدونة -->
+<section id="blog" aria-labelledby="blog-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">قصص الكلاب</span>
+    <h2 class="section-title" id="blog-heading">نصائح وحكايات ومغامرات</h2>
+    <p class="section-desc">نصائح متخصصة وقصص تلمس القلوب وكل ما تحتاج لمعرفته عن رعاية كلبك.</p>
+  </div>
+  <div class="blog-grid">
+    <article class="blog-card" data-reveal data-delay="0" tabindex="0">
+      <div class="blog-img-wrap"><img decoding="async" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80" alt="كلب سعيد في حقل" loading="lazy" /></div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">تغذية</span><span class="blog-date">15 يناير 2026</span></div>
+        <h3 class="blog-title">الدليل الشامل لتغذية الكلاب الفاخرة</h3>
+        <p class="blog-excerpt">اكتشف ما يدخل في حمية غذائية متوازنة وصحية لكلبك وكيف تطيل التغذية السليمة عمره.</p>
+        <span class="blog-read-more">اقرأ المقال ←</span>
+      </div>
+    </article>
+    <article class="blog-card" data-reveal data-delay="100" tabindex="0">
+      <div class="blog-img-wrap"><img decoding="async" src="https://images.unsplash.com/photo-1601758124277-3fa74ac18ede?w=600&q=80" alt="كلاب تلعب معاً" loading="lazy" /></div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">صحة</span><span class="blog-date">3 فبراير 2026</span></div>
+        <h3 class="blog-title">لماذا التنشئة الاجتماعية ضرورية للصحة النفسية لكلبك</h3>
+        <p class="blog-excerpt">تعرّف على سبب تقليل اللعب المنتظم مع كلاب أخرى للقلق بشكل كبير وبناء الثقة وتعزيز حياة أكثر سعادة.</p>
+        <span class="blog-read-more">اقرأ المقال ←</span>
+      </div>
+    </article>
+    <article class="blog-card" data-reveal data-delay="200" tabindex="0">
+      <div class="blog-img-wrap"><img decoding="async" src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&q=80" alt="كلب يُزيَّن" loading="lazy" /></div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">تزيين</span><span class="blog-date">10 مارس 2026</span></div>
+        <h3 class="blog-title">التزيين الاحترافي: أكثر من مجرد مظهر جميل</h3>
+        <p class="blog-excerpt">التزيين الاحترافي المنتظم يمنع مشاكل الجلد ويكتشف المشاكل الصحية المبكرة ويبقي كلبك يشعر بأفضل حال.</p>
+        <span class="blog-read-more">اقرأ المقال ←</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- كلب اليوم -->
+<section id="dog-of-the-day" aria-labelledby="dotd-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">نجم اليوم</span>
+    <h2 class="section-title" id="dotd-heading">كلب اليوم 🌟</h2>
+    <p class="section-desc">تعرّف على ضيفنا المميز اليوم — كلب محظوظ تم اختياره من عائلتنا السعيدة.</p>
+  </div>
+  <div class="dotd-card" data-reveal>
+    <div class="dotd-img-wrap">
+      <img id="dotd-img" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=700&q=80" alt="كلب اليوم" />
+      <div class="dotd-badge">نجم اليوم ⭐</div>
+    </div>
+    <div class="dotd-body">
+      <h3 class="dotd-name" id="dotd-name">بادي</h3>
+      <div class="dotd-meta">
+        <span class="dotd-tag" id="dotd-age">🗓️ 3 سنوات</span>
+        <span class="dotd-tag" id="dotd-breed">🐕 ريتريفر ذهبي</span>
+      </div>
+      <p class="dotd-desc" id="dotd-desc">بادي هو أكثر ضيف مبهج استضفناه على الإطلاق! يحب الاستحمام في حمام السباحة الخارجي ويصادق كل كلب يلتقيه. ذيله لا يتوقف عن الاهتزاز أبداً.</p>
+      <div class="dotd-traits" id="dotd-traits">
+        <span class="dotd-trait">🎾 مرح</span>
+        <span class="dotd-trait">💛 لطيف</span>
+        <span class="dotd-trait">🏊 يحب الماء</span>
+        <span class="dotd-trait">😄 اجتماعي</span>
+      </div>
+      <button class="dotd-next-btn" id="dotd-next">تعرّف على كلب آخر 🐾</button>
+    </div>
+  </div>
+</section>
+
+<!-- محقق المزاج -->
+<section id="mood-checker" aria-labelledby="mood-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">أداة تفاعلية</span>
+    <h2 class="section-title" id="mood-heading">محقق مزاج الكلب 🐕</h2>
+    <p class="section-desc">اختر كيف يشعر كلبك اليوم واكتشف الأنشطة المثالية المصممة خصيصاً له.</p>
+  </div>
+  <div class="mood-wrapper" data-reveal>
+    <div class="mood-picker">
+      <p class="mood-question">كيف يشعر كلبك الآن؟</p>
+      <div class="mood-options" role="group" aria-label="اختر مزاج الكلب">
+        <button class="mood-btn" data-mood="happy" aria-pressed="false"><span class="mood-emoji">😄</span><span>سعيد</span></button>
+        <button class="mood-btn" data-mood="energetic" aria-pressed="false"><span class="mood-emoji">⚡</span><span>نشيط</span></button>
+        <button class="mood-btn" data-mood="calm" aria-pressed="false"><span class="mood-emoji">😌</span><span>هادئ</span></button>
+        <button class="mood-btn" data-mood="hungry" aria-pressed="false"><span class="mood-emoji">🍖</span><span>جائع</span></button>
+      </div>
+    </div>
+    <div class="mood-result" id="mood-result" style="display:none;" aria-live="polite">
+      <div class="mood-result-inner">
+        <div class="mood-result-emoji" id="mood-emoji"></div>
+        <h3 class="mood-result-title" id="mood-title"></h3>
+        <p class="mood-result-sub" id="mood-sub"></p>
+        <div class="mood-activities" id="mood-activities"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- متتبع النشاط -->
+<section id="activity-tracker" aria-labelledby="tracker-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">الروتين اليومي</span>
+    <h2 class="section-title" id="tracker-heading">متتبع نشاط الكلب 📋</h2>
+    <p class="section-desc">لمحة عن يوم مثالي نموذجي لكلبك في Living Homes.</p>
+  </div>
+  <div class="tracker-grid" data-reveal>
+    <div class="tracker-item">
+      <div class="tracker-icon">🌅</div>
+      <div class="tracker-info">
+        <div class="tracker-top"><span class="tracker-name">التمشية الصباحية</span><span class="tracker-time">7:00 – 8:00 ص</span></div>
+        <div class="tracker-bar-wrap"><div class="tracker-bar"><div class="tracker-fill" style="width:0%" data-target="85"></div></div><span class="tracker-pct">85%</span></div>
+        <p class="tracker-desc">تمشية منعشة في ممراتنا الطبيعية الخاصة مع مدرب معتمد.</p>
+      </div>
+    </div>
+    <div class="tracker-item">
+      <div class="tracker-icon">🎾</div>
+      <div class="tracker-info">
+        <div class="tracker-top"><span class="tracker-name">وقت اللعب</span><span class="tracker-time">10:00 ص – 12:00 ظ</span></div>
+        <div class="tracker-bar-wrap"><div class="tracker-bar"><div class="tracker-fill" style="width:0%" data-target="92"></div></div><span class="tracker-pct">92%</span></div>
+        <p class="tracker-desc">لعب خارجي تفاعلي بالألعاب ومعدات رياضية والأصدقاء.</p>
+      </div>
+    </div>
+    <div class="tracker-item">
+      <div class="tracker-icon">✂️</div>
+      <div class="tracker-info">
+        <div class="tracker-top"><span class="tracker-name">جلسة التزيين</span><span class="tracker-time">2:00 – 3:30 م</span></div>
+        <div class="tracker-bar-wrap"><div class="tracker-bar"><div class="tracker-fill" style="width:0%" data-target="70"></div></div><span class="tracker-pct">70%</span></div>
+        <p class="tracker-desc">تزيين احترافي كامل — استحمام وتجفيف وتمشيط وقص أظافر.</p>
+      </div>
+    </div>
+    <div class="tracker-item">
+      <div class="tracker-icon">🍽️</div>
+      <div class="tracker-info">
+        <div class="tracker-top"><span class="tracker-name">وقت العشاء</span><span class="tracker-time">5:30 – 6:00 م</span></div>
+        <div class="tracker-bar-wrap"><div class="tracker-bar"><div class="tracker-fill" style="width:0%" data-target="100"></div></div><span class="tracker-pct">100%</span></div>
+        <p class="tracker-desc">وجبة فاخرة معتمدة بيطرياً تُعدّ طازجة يومياً وفق نظام كلبك الغذائي.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- نصائح العناية -->
+<section id="care-tips" aria-labelledby="tips-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">نصائح متخصصة</span>
+    <h2 class="section-title" id="tips-heading">نصائح العناية بالكلاب 💡</h2>
+    <p class="section-desc">انقر أدناه للحصول على نصيحة متخصصة من فريقنا البيطري — نصيحة جديدة في كل مرة!</p>
+  </div>
+  <div class="tips-wrapper" data-reveal>
+    <div class="tip-card" id="tip-card" aria-live="polite">
+      <div class="tip-icon" id="tip-icon">💡</div>
+      <blockquote class="tip-text" id="tip-text">انقر على الزر أدناه للحصول على أول نصيحة عناية بالكلاب من فريقنا المتخصص.</blockquote>
+      <div class="tip-category" id="tip-category"></div>
+    </div>
+    <button class="btn-tip" id="btn-tip"><span>🐾 &nbsp;احصل على نصيحة عناية</span></button>
+  </div>
+</section>
+
+<!-- اتصل بنا -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="contact-inner">
+    <div class="contact-info" data-reveal="right">
+      <span class="section-label">تواصل معنا</span>
+      <h2 class="section-title" id="contact-heading">يسعدنا الاستماع إليك</h2>
+      <p class="section-desc">هل لديك أسئلة حول خدماتنا أو تريد ترتيب زيارة؟ تواصل معنا — نحن هنا 7 أيام في الأسبوع.</p>
+      <div class="contact-details">
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📞</div>
+          <div><div class="contact-detail-title">الهاتف</div><div class="contact-detail-value"><a href="tel:0797643243">0797643243</a></div></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✉️</div>
+          <div><div class="contact-detail-title">البريد الإلكتروني</div><div class="contact-detail-value"><a href="mailto:ttttwwiiccee@gmail.com">ttttwwiiccee@gmail.com</a></div></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div><div class="contact-detail-title">العنوان</div><div class="contact-detail-value">الأردن، الكرك، الثنية، نور الحسين</div></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🕐</div>
+          <div><div class="contact-detail-title">ساعات العمل</div><div class="contact-detail-value">الاثنين–الأحد: 7:00 ص – 9:00 م</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form-card" data-reveal="left">
+      <h3 class="booking-form-title">أرسل رسالة</h3>
+      <p class="booking-form-sub">سنرد خلال 24 ساعة</p>
+      <form id="contact-form" novalidate>
+        <div class="contact-form-row">
+          <div class="form-group"><label for="c-name">اسمك</label><input type="text" id="c-name" name="name" placeholder="أحمد العلي" required /></div>
+          <div class="form-group"><label for="c-email">البريد الإلكتروني</label><input type="email" id="c-email" name="email" placeholder="ahmed@example.com" required /></div>
+        </div>
+        <div class="contact-form-row full">
+          <div class="form-group"><label for="c-subject">الموضوع</label><input type="text" id="c-subject" name="subject" placeholder="كيف يمكننا مساعدتك؟" /></div>
+        </div>
+        <div class="contact-form-row full">
+          <div class="form-group"><label for="c-message">الرسالة</label><textarea id="c-message" name="message" placeholder="أخبرنا عن كلبك وما تحتاجه..." required></textarea></div>
+        </div>
+        <button type="submit" class="btn-book"><span>✉️ &nbsp;إرسال الرسالة</span></button>
+      </form>
+    </div>
+  </div>
+  <div class="map-wrapper" data-reveal>
+    <div class="map-header">
+      <span class="section-label">موقعنا</span>
+      <h3 class="map-title">على الخريطة</h3>
+    </div>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3413.937090757424!2d35.730748!3d31.1670208!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15037751e99b2a05%3A0x56ffa81e6bb1e9ea!2z2YXYr9ix2LPYqSDZhtmI2LEg2KfZhNit2LXZitmGINin2YTYq9in2YbZiNmK2Kkg2YTZhNio2YbYp9iq!5e0!3m2!1sar!2sjo!4v1772650564255!5m2!1sar!2sjo"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="موقع Living Homes" aria-label="خريطة تُظهر موقع الفندق"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">Living Homes</div>
+        <div class="footer-tagline">فندق الكلاب الفاخر</div>
+        <p>حيث يُعامَل كل كلب كالملوك. إقامة متميزة ورعاية متخصصة وبيت بعيد عن البيت منذ 2026.</p>
+        <div class="footer-socials" role="list">
+          <a href="#" class="footer-social" role="listitem" aria-label="فيسبوك">f</a>
+          <a href="#" class="footer-social" role="listitem" aria-label="إنستغرام">📷</a>
+          <a href="#" class="footer-social" role="listitem" aria-label="تويتر">𝕏</a>
+          <a href="#" class="footer-social" role="listitem" aria-label="يوتيوب">▶</a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="الخدمات">
+        <h4>الخدمات</h4>
+        <ul role="list">
+          <li><a href="#services">تمشية الكلاب</a></li>
+          <li><a href="#services">التزيين والسبا</a></li>
+          <li><a href="#services">مراقبة الحيوانات</a></li>
+          <li><a href="#services">الأنشطة الخارجية</a></li>
+          <li><a href="#services">الرعاية البيطرية</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="روابط سريعة">
+        <h4>روابط سريعة</h4>
+        <ul role="list">
+          <li><a href="#booking">احجز إقامة</a></li>
+          <li><a href="#packages">الباقات</a></li>
+          <li><a href="#gallery">المعرض</a></li>
+          <li><a href="#blog">قصص الكلاب</a></li>
+          <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="معلومات">
+        <h4>معلومات</h4>
+        <ul role="list">
+          <li><a href="#">من نحن</a></li>
+          <li><a href="#">وظائف</a></li>
+          <li><a href="#">سياسة الخصوصية</a></li>
+          <li><a href="#">شروط الخدمة</a></li>
+          <li><a href="#">الإتاحة</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Living Homes – فندق الكلاب الفاخر. جميع الحقوق محفوظة.</span>
+      <span class="footer-credit">تصميم وتطوير <strong>رواء الدمور</strong></span>
+    </div>
+  </div>
+</footer>
+
+<a id="floating-book" href="#booking" aria-label="احجز الآن">🐾 &nbsp;احجز الآن</a>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
+<script src="js/main-ar.js" defer></script>
+<script src="js/nav.js" defer></script>
+</body>
+</html>

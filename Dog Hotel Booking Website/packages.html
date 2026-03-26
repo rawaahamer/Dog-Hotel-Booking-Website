@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Choose the perfect accommodation package for your dog at Living Homes." />
+  <title>Packages | Living Homes – Luxury Dog Hotel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" /></noscript>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>" />
+</head>
+<body>
+<div id="loading-screen" role="status" aria-label="Loading">
+  <div class="loading-paw">🐾</div>
+  <div class="loading-logo">Living Homes</div>
+  <div class="loading-bar"><div class="loading-bar-fill"></div></div>
+</div>
+
+<aside id="access-toolbar" role="complementary" aria-label="Accessibility tools">
+  <span class="access-label" aria-hidden="true">Access</span>
+  <button class="access-btn" id="acc-increase" title="Increase text size" aria-label="Increase text size">A+</button>
+  <button class="access-btn" id="acc-decrease" title="Decrease text size" aria-label="Decrease text size">A-</button>
+  <button class="access-btn" id="acc-contrast" title="High contrast" aria-label="Toggle high contrast">◑</button>
+  <button class="access-btn" id="acc-dark" title="Dark mode" aria-label="Toggle dark mode">🌙</button>
+  <button class="access-btn" id="acc-tts" title="Text to speech" aria-label="Toggle text to speech">🔊</button>
+</aside>
+<header>
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="Living Homes Luxury Dog Hotel">
+      <span class="nav-logo-main">Living Homes</span>
+      <span class="nav-logo-sub">Luxury Dog Hotel</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-pages-wrap">
+        <button class="nav-pages-toggle" aria-haspopup="true" aria-expanded="false">
+          Pages <span class="arrow">▾</span>
+        </button>
+        <div class="nav-dropdown" role="menu">
+          <a href="booking.html"   class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">📅</span><div><div class="nav-dd-label">Book a Stay</div><div class="nav-dd-sub">Reserve your dates</div></div></a>
+          <a href="services.html"  class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">🛁</span><div><div class="nav-dd-label">Services</div><div class="nav-dd-sub">What we offer</div></div></a>
+          <a href="packages.html"  class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">🏡</span><div><div class="nav-dd-label">Packages</div><div class="nav-dd-sub">Accommodation options</div></div></a>
+          <a href="gallery.html"   class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">📷</span><div><div class="nav-dd-label">Gallery</div><div class="nav-dd-sub">Photo gallery</div></div></a>
+          <a href="reviews.html"   class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">⭐</span><div><div class="nav-dd-label">Reviews</div><div class="nav-dd-sub">What owners say</div></div></a>
+          <a href="stories.html"   class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">📰</span><div><div class="nav-dd-label">Dog Stories</div><div class="nav-dd-sub">Tips, tales &amp; tails</div></div></a>
+          <a href="mood.html"      class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">🐕</span><div><div class="nav-dd-label">Mood Checker</div><div class="nav-dd-sub">Activities by mood</div></div></a>
+          <a href="tracker.html"   class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">📋</span><div><div class="nav-dd-label">Activity Tracker</div><div class="nav-dd-sub">Daily routine</div></div></a>
+          <a href="care-tips.html" class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">💡</span><div><div class="nav-dd-label">Care Tips</div><div class="nav-dd-sub">Expert dog advice</div></div></a>
+          <a href="contact.html"   class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">✉️</span><div><div class="nav-dd-label">Contact</div><div class="nav-dd-sub">Get in touch</div></div></a>
+        </div>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="care-tips.html">Care Tips</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="booking.html" class="nav-cta">Book Now</a></li>
+    </ul>
+    <a href="index-ar.html" class="lang-toggle" aria-label="Switch to Arabic">عربي</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <nav class="nav-mobile" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <button class="nav-mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
+    <a href="index.html">Home</a>
+    <details class="nav-mobile-pages">
+      <summary>Pages <span class="arrow">▾</span></summary>
+      <div class="nav-mobile-sublinks">
+        <a href="booking.html">📅 Book a Stay</a>
+        <a href="services.html">🛁 Services</a>
+        <a href="packages.html">🏡 Packages</a>
+        <a href="gallery.html">📷 Gallery</a>
+        <a href="reviews.html">⭐ Reviews</a>
+        <a href="stories.html">📰 Dog Stories</a>
+        <a href="mood.html">🐕 Mood Checker</a>
+        <a href="tracker.html">📋 Activity Tracker</a>
+        <a href="care-tips.html">💡 Care Tips</a>
+        <a href="contact.html">✉️ Contact</a>
+      </div>
+    </details>
+    <a href="booking.html">Book Now</a>
+  </nav>
+</header>
+<main>
+<div class="page-banner">
+  <div class="page-banner-bg" style="background-image:url('https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=1800&q=80')"></div>
+  <div class="page-banner-content">
+    <span class="page-banner-label">Accommodation</span>
+    <h1 class="page-banner-title">Choose the <em>Perfect Package</em></h1>
+    <p class="page-banner-desc">Three thoughtfully curated stay options, each offering exceptional comfort.</p>
+  </div>
+</div>
+<section id="packages" aria-labelledby="packages-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">Accommodation</span>
+    <h2 class="section-title" id="packages-heading">Choose the Perfect Package</h2>
+    <p class="section-desc">Three thoughtfully curated stay options, each offering exceptional comfort and care.</p>
+  </div>
+  <div class="packages-grid">
+    <article class="package-card" data-reveal data-delay="0" tabindex="0">
+      <h3 class="package-name">Essential Stay</h3>
+      <div class="package-price"><span class="package-amount">45</span><span class="package-period">&nbsp;JD / night</span></div>
+      <div class="package-divider"></div>
+      <ul class="package-features" role="list">
+        <li class="package-feature"><span class="package-check">✓</span>Cozy private room (10 m²)</li>
+        <li class="package-feature"><span class="package-check">✓</span>Premium dog food included</li>
+        <li class="package-feature"><span class="package-check">✓</span>2× daily walks</li>
+        <li class="package-feature"><span class="package-check">✓</span>Group play sessions</li>
+        <li class="package-feature"><span class="package-check">✓</span>Daily wellness check</li>
+      </ul>
+      <button class="btn-package" aria-label="Select Essential Stay">Select Package</button>
+    </article>
+    <article class="package-card featured" data-reveal data-delay="100" tabindex="0">
+      <div class="package-badge">Most Popular</div>
+      <h3 class="package-name">Comfort Suite</h3>
+      <div class="package-price"><span class="package-amount">85</span><span class="package-period">&nbsp;JD / night</span></div>
+      <div class="package-divider"></div>
+      <ul class="package-features" role="list">
+        <li class="package-feature"><span class="package-check">✓</span>Spacious suite (20 m²) with sofa</li>
+        <li class="package-feature"><span class="package-check">✓</span>Gourmet meals & treats</li>
+        <li class="package-feature"><span class="package-check">✓</span>3× private walks daily</li>
+        <li class="package-feature"><span class="package-check">✓</span>Grooming session included</li>
+        <li class="package-feature"><span class="package-check">✓</span>Live camera access</li>
+        <li class="package-feature"><span class="package-check">✓</span>Daily photo reports</li>
+      </ul>
+      <button class="btn-package" aria-label="Select Comfort Suite">Select Package</button>
+    </article>
+    <article class="package-card" data-reveal data-delay="200" tabindex="0">
+      <h3 class="package-name">Luxury Villa</h3>
+      <div class="package-price"><span class="package-amount">150</span><span class="package-period">&nbsp;JD / night</span></div>
+      <div class="package-divider"></div>
+      <ul class="package-features" role="list">
+        <li class="package-feature"><span class="package-check">✓</span>Private villa (40 m²) + garden</li>
+        <li class="package-feature"><span class="package-check">✓</span>Personal butler service</li>
+        <li class="package-feature"><span class="package-check">✓</span>Unlimited walks & play</li>
+        <li class="package-feature"><span class="package-check">✓</span>Full spa & massage</li>
+        <li class="package-feature"><span class="package-check">✓</span>Custom meal plan</li>
+        <li class="package-feature"><span class="package-check">✓</span>Pick-up & drop-off included</li>
+        <li class="package-feature"><span class="package-check">✓</span>Priority vet access</li>
+      </ul>
+      <button class="btn-package" aria-label="Select Luxury Villa">Select Package</button>
+    </article>
+  </div>
+</section>
+</main>
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">Living Homes</div>
+        <div class="footer-tagline">Luxury Dog Hotel</div>
+        <p>Where every dog is treated like royalty. Premium boarding, expert care, and a home away from home since 2026.</p>
+        <div class="footer-socials" role="list">
+          <a href="#" class="footer-social" role="listitem" aria-label="Facebook">f</a>
+          <a href="#" class="footer-social" role="listitem" aria-label="Instagram">📷</a>
+          <a href="#" class="footer-social" role="listitem" aria-label="Twitter">𝕏</a>
+          <a href="#" class="footer-social" role="listitem" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Services">
+        <h4>Services</h4>
+        <ul role="list">
+          <li><a href="services.html">Dog Walking</a></li>
+          <li><a href="services.html">Grooming &amp; Spa</a></li>
+          <li><a href="services.html">Pet Monitoring</a></li>
+          <li><a href="services.html">Outdoor Activities</a></li>
+          <li><a href="services.html">Vet Care</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Quick links">
+        <h4>Quick Links</h4>
+        <ul role="list">
+          <li><a href="booking.html">Book a Stay</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="stories.html">Dog Stories</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Information">
+        <h4>Information</h4>
+        <ul role="list">
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="care-tips.html">Care Tips</a></li>
+          <li><a href="mood.html">Mood Checker</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Accessibility</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Living Homes – Luxury Dog Hotel. All rights reserved.</span>
+      <span class="footer-credit">Website created by <strong>Rawaa Al-Dmour</strong></span>
+    </div>
+  </div>
+</footer>
+
+<a id="floating-book" href="booking.html" aria-label="Book now">🐾 &nbsp;Book Now</a>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
+<script src="js/page.js" defer></script>
+<script src="js/nav.js" defer></script>
+</body>
+</html>

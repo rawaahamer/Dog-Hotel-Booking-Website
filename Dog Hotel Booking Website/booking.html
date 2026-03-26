@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reserve your dog's perfect stay at Living Homes Luxury Dog Hotel." />
+  <title>Book a Stay | Living Homes – Luxury Dog Hotel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" /></noscript>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>" />
+</head>
+<body>
+<div id="loading-screen" role="status" aria-label="Loading">
+  <div class="loading-paw">🐾</div>
+  <div class="loading-logo">Living Homes</div>
+  <div class="loading-bar"><div class="loading-bar-fill"></div></div>
+</div>
+
+<aside id="access-toolbar" role="complementary" aria-label="Accessibility tools">
+  <span class="access-label" aria-hidden="true">Access</span>
+  <button class="access-btn" id="acc-increase" title="Increase text size" aria-label="Increase text size">A+</button>
+  <button class="access-btn" id="acc-decrease" title="Decrease text size" aria-label="Decrease text size">A-</button>
+  <button class="access-btn" id="acc-contrast" title="High contrast" aria-label="Toggle high contrast">◑</button>
+  <button class="access-btn" id="acc-dark" title="Dark mode" aria-label="Toggle dark mode">🌙</button>
+  <button class="access-btn" id="acc-tts" title="Text to speech" aria-label="Toggle text to speech">🔊</button>
+</aside>
+<header>
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="Living Homes Luxury Dog Hotel">
+      <span class="nav-logo-main">Living Homes</span>
+      <span class="nav-logo-sub">Luxury Dog Hotel</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-pages-wrap">
+        <button class="nav-pages-toggle" aria-haspopup="true" aria-expanded="false">
+          Pages <span class="arrow">▾</span>
+        </button>
+        <div class="nav-dropdown" role="menu">
+          <a href="booking.html"   class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">📅</span><div><div class="nav-dd-label">Book a Stay</div><div class="nav-dd-sub">Reserve your dates</div></div></a>
+          <a href="services.html"  class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">🛁</span><div><div class="nav-dd-label">Services</div><div class="nav-dd-sub">What we offer</div></div></a>
+          <a href="packages.html"  class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">🏡</span><div><div class="nav-dd-label">Packages</div><div class="nav-dd-sub">Accommodation options</div></div></a>
+          <a href="gallery.html"   class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">📷</span><div><div class="nav-dd-label">Gallery</div><div class="nav-dd-sub">Photo gallery</div></div></a>
+          <a href="reviews.html"   class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">⭐</span><div><div class="nav-dd-label">Reviews</div><div class="nav-dd-sub">What owners say</div></div></a>
+          <a href="stories.html"   class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">📰</span><div><div class="nav-dd-label">Dog Stories</div><div class="nav-dd-sub">Tips, tales &amp; tails</div></div></a>
+          <a href="mood.html"      class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">🐕</span><div><div class="nav-dd-label">Mood Checker</div><div class="nav-dd-sub">Activities by mood</div></div></a>
+          <a href="tracker.html"   class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">📋</span><div><div class="nav-dd-label">Activity Tracker</div><div class="nav-dd-sub">Daily routine</div></div></a>
+          <a href="care-tips.html" class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">💡</span><div><div class="nav-dd-label">Care Tips</div><div class="nav-dd-sub">Expert dog advice</div></div></a>
+          <a href="contact.html"   class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">✉️</span><div><div class="nav-dd-label">Contact</div><div class="nav-dd-sub">Get in touch</div></div></a>
+        </div>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="care-tips.html">Care Tips</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="booking.html" class="nav-cta">Book Now</a></li>
+    </ul>
+    <a href="index-ar.html" class="lang-toggle" aria-label="Switch to Arabic">عربي</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <nav class="nav-mobile" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <button class="nav-mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
+    <a href="index.html">Home</a>
+    <details class="nav-mobile-pages">
+      <summary>Pages <span class="arrow">▾</span></summary>
+      <div class="nav-mobile-sublinks">
+        <a href="booking.html">📅 Book a Stay</a>
+        <a href="services.html">🛁 Services</a>
+        <a href="packages.html">🏡 Packages</a>
+        <a href="gallery.html">📷 Gallery</a>
+        <a href="reviews.html">⭐ Reviews</a>
+        <a href="stories.html">📰 Dog Stories</a>
+        <a href="mood.html">🐕 Mood Checker</a>
+        <a href="tracker.html">📋 Activity Tracker</a>
+        <a href="care-tips.html">💡 Care Tips</a>
+        <a href="contact.html">✉️ Contact</a>
+      </div>
+    </details>
+    <a href="booking.html">Book Now</a>
+  </nav>
+</header>
+<main>
+<div class="page-banner">
+  <div class="page-banner-bg" style="background-image:url('https://images.unsplash.com/photo-1601758124277-3fa74ac18ede?w=1800&q=80')"></div>
+  <div class="page-banner-content">
+    <span class="page-banner-label">Reservations</span>
+    <h1 class="page-banner-title">Reserve Your Dog's <em>Perfect Stay</em></h1>
+    <p class="page-banner-desc">Check availability in seconds. Our team personally reviews every booking.</p>
+  </div>
+</div>
+<section id="booking" aria-labelledby="booking-heading">
+  <div class="booking-inner">
+    <div class="booking-text" data-reveal="left">
+      <span class="section-label">Reservations</span>
+      <h2 class="section-title" id="booking-heading">Reserve Your Dog's Perfect Stay</h2>
+      <p class="section-desc">Check availability in seconds. Our team personally reviews every booking to ensure the best experience.</p>
+      <ul class="booking-features" role="list">
+        <li class="booking-feature"><span class="booking-feature-icon">🔒</span>Secure & easy online booking</li>
+        <li class="booking-feature"><span class="booking-feature-icon">📋</span>Flexible cancellation policy</li>
+        <li class="booking-feature"><span class="booking-feature-icon">💌</span>Daily photo & video updates</li>
+        <li class="booking-feature"><span class="booking-feature-icon">🏥</span>Veterinary check-in included</li>
+      </ul>
+    </div>
+    <div class="booking-form-card" data-reveal="right">
+      <h3 class="booking-form-title">Check Availability</h3>
+      <p class="booking-form-sub">Fill in the details below — calendar starts from March 1, 2026</p>
+      <form id="booking-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="checkin">Check-In Date</label>
+            <input type="text" id="checkin" name="checkin" placeholder="Select check-in date" readonly required />
+          </div>
+          <div class="form-group">
+            <label for="checkout">Check-Out Date</label>
+            <input type="text" id="checkout" name="checkout" placeholder="Select check-out date" readonly required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="dogs">Number of Dogs</label>
+            <select id="dogs" name="dogs" required>
+              <option value="">Select</option>
+              <option value="1">1 Dog</option>
+              <option value="2">2 Dogs</option>
+              <option value="3">3 Dogs</option>
+              <option value="4">4+ Dogs</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pkg">Package</label>
+            <select id="pkg" name="pkg" required>
+              <option value="">Select Package</option>
+              <option value="essential">Essential Stay – 45 JD</option>
+              <option value="comfort">Comfort Suite – 85 JD</option>
+              <option value="luxury">Luxury Villa – 150 JD</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row full">
+          <div class="form-group">
+            <label for="dog-name">Dog's Name</label>
+            <input type="text" id="dog-name" name="dog-name" placeholder="e.g. Buddy, Luna..." />
+          </div>
+        </div>
+        <button type="submit" class="btn-book"><span>🔍 &nbsp;Check Availability</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">Living Homes</div>
+        <div class="footer-tagline">Luxury Dog Hotel</div>
+        <p>Where every dog is treated like royalty. Premium boarding, expert care, and a home away from home since 2026.</p>
+        <div class="footer-socials" role="list">
+          <a href="#" class="footer-social" role="listitem" aria-label="Facebook">f</a>
+          <a href="#" class="footer-social" role="listitem" aria-label="Instagram">📷</a>
+          <a href="#" class="footer-social" role="listitem" aria-label="Twitter">𝕏</a>
+          <a href="#" class="footer-social" role="listitem" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Services">
+        <h4>Services</h4>
+        <ul role="list">
+          <li><a href="services.html">Dog Walking</a></li>
+          <li><a href="services.html">Grooming &amp; Spa</a></li>
+          <li><a href="services.html">Pet Monitoring</a></li>
+          <li><a href="services.html">Outdoor Activities</a></li>
+          <li><a href="services.html">Vet Care</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Quick links">
+        <h4>Quick Links</h4>
+        <ul role="list">
+          <li><a href="booking.html">Book a Stay</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="stories.html">Dog Stories</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Information">
+        <h4>Information</h4>
+        <ul role="list">
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="care-tips.html">Care Tips</a></li>
+          <li><a href="mood.html">Mood Checker</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Accessibility</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Living Homes – Luxury Dog Hotel. All rights reserved.</span>
+      <span class="footer-credit">Website created by <strong>Rawaa Al-Dmour</strong></span>
+    </div>
+  </div>
+</footer>
+
+<a id="floating-book" href="booking.html" aria-label="Book now">🐾 &nbsp;Book Now</a>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
+<script src="js/page.js" defer></script>
+<script src="js/nav.js" defer></script>
+</body>
+</html>

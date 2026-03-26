@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Living Homes – Luxury Dog Hotel. Premium accommodation, spa treatments, and 24/7 care." />
+  <title>Living Homes – Luxury Dog Hotel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" /></noscript>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>" />
+</head>
+<body>
+
+<div id="loading-screen" role="status" aria-label="Loading">
+  <div class="loading-paw">🐾</div>
+  <div class="loading-logo">Living Homes</div>
+  <div class="loading-bar"><div class="loading-bar-fill"></div></div>
+</div>
+
+<aside id="access-toolbar" role="complementary" aria-label="Accessibility tools">
+  <span class="access-label" aria-hidden="true">Access</span>
+  <button class="access-btn" id="acc-increase" title="Increase text size" aria-label="Increase text size">A+</button>
+  <button class="access-btn" id="acc-decrease" title="Decrease text size" aria-label="Decrease text size">A-</button>
+  <button class="access-btn" id="acc-contrast" title="High contrast" aria-label="Toggle high contrast">◑</button>
+  <button class="access-btn" id="acc-dark" title="Dark mode" aria-label="Toggle dark mode">🌙</button>
+  <button class="access-btn" id="acc-tts" title="Text to speech" aria-label="Toggle text to speech">🔊</button>
+</aside>
+
+<header>
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="Living Homes Luxury Dog Hotel">
+      <span class="nav-logo-main">Living Homes</span>
+      <span class="nav-logo-sub">Luxury Dog Hotel</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-pages-wrap">
+        <button class="nav-pages-toggle" aria-haspopup="true" aria-expanded="false">
+          Pages <span class="arrow">▾</span>
+        </button>
+        <div class="nav-dropdown" role="menu">
+          <a href="booking.html"   class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">📅</span><div><div class="nav-dd-label">Book a Stay</div><div class="nav-dd-sub">Reserve your dates</div></div></a>
+          <a href="services.html"  class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">🛁</span><div><div class="nav-dd-label">Services</div><div class="nav-dd-sub">What we offer</div></div></a>
+          <a href="packages.html"  class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">🏡</span><div><div class="nav-dd-label">Packages</div><div class="nav-dd-sub">Accommodation options</div></div></a>
+          <a href="gallery.html"   class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">📷</span><div><div class="nav-dd-label">Gallery</div><div class="nav-dd-sub">Photo gallery</div></div></a>
+          <a href="reviews.html"   class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">⭐</span><div><div class="nav-dd-label">Reviews</div><div class="nav-dd-sub">What owners say</div></div></a>
+          <a href="stories.html"   class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">📰</span><div><div class="nav-dd-label">Dog Stories</div><div class="nav-dd-sub">Tips, tales &amp; tails</div></div></a>
+          <a href="mood.html"      class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">🐕</span><div><div class="nav-dd-label">Mood Checker</div><div class="nav-dd-sub">Activities by mood</div></div></a>
+          <a href="tracker.html"   class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">📋</span><div><div class="nav-dd-label">Activity Tracker</div><div class="nav-dd-sub">Daily routine</div></div></a>
+          <a href="care-tips.html" class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">💡</span><div><div class="nav-dd-label">Care Tips</div><div class="nav-dd-sub">Expert dog advice</div></div></a>
+          <a href="contact.html"   class="nav-dd-item" role="menuitem"><span class="nav-dd-icon">✉️</span><div><div class="nav-dd-label">Contact</div><div class="nav-dd-sub">Get in touch</div></div></a>
+        </div>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="care-tips.html">Care Tips</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="booking.html" class="nav-cta">Book Now</a></li>
+    </ul>
+    <a href="index-ar.html" class="lang-toggle" aria-label="Switch to Arabic">عربي</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <nav class="nav-mobile" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <button class="nav-mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
+    <a href="index.html">Home</a>
+    <details class="nav-mobile-pages">
+      <summary>Pages <span class="arrow">▾</span></summary>
+      <div class="nav-mobile-sublinks">
+        <a href="booking.html">📅 Book a Stay</a>
+        <a href="services.html">🛁 Services</a>
+        <a href="packages.html">🏡 Packages</a>
+        <a href="gallery.html">📷 Gallery</a>
+        <a href="reviews.html">⭐ Reviews</a>
+        <a href="stories.html">📰 Dog Stories</a>
+        <a href="mood.html">🐕 Mood Checker</a>
+        <a href="tracker.html">📋 Activity Tracker</a>
+        <a href="care-tips.html">💡 Care Tips</a>
+        <a href="contact.html">✉️ Contact</a>
+      </div>
+    </details>
+    <a href="booking.html">Book Now</a>
+  </nav>
+</header>
+
+<main>
+
+<section id="hero" aria-label="Hero">
+  <div class="hero-slides" aria-hidden="true">
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🏅 &nbsp;Voted #1 Luxury Pet Hotel 2026</div>
+    <h1 class="hero-title">
+      <span>Where Your Dog</span>
+      <em>Feels at Home</em>
+    </h1>
+    <p class="hero-desc">Premium boarding, world-class spa treatments, and 24/7 personalized care — because your beloved companion deserves nothing less than extraordinary.</p>
+    <div class="hero-buttons">
+      <a href="#booking" class="btn-primary">🐾 &nbsp;Book a Stay</a>
+      <a href="#services" class="btn-outline">Explore Services →</a>
+    </div>
+  </div>
+  <div class="hero-dots" role="tablist">
+    <button class="hero-dot" role="tab" aria-label="Slide 1"></button>
+    <button class="hero-dot" role="tab" aria-label="Slide 2"></button>
+    <button class="hero-dot" role="tab" aria-label="Slide 3"></button>
+  </div>
+  <div class="hero-scroll" aria-hidden="true"><div class="hero-scroll-line"></div><span>Scroll</span></div>
+</section>
+
+<section id="stats-bar" aria-label="Achievements">
+  <div class="stats-inner">
+    <div class="stat-item" data-reveal>
+      <span class="stat-number" data-counter data-target="2500" data-suffix="+">0</span>
+      <span class="stat-label">Happy Dogs Hosted</span>
+    </div>
+    <div class="stat-item" data-reveal data-delay="100">
+      <span class="stat-number" data-counter data-target="8" data-suffix=" Yrs">0</span>
+      <span class="stat-label">Years of Excellence</span>
+    </div>
+    <div class="stat-item" data-reveal data-delay="200">
+      <span class="stat-number" data-counter data-target="98" data-suffix="%">0</span>
+      <span class="stat-label">5-Star Reviews</span>
+    </div>
+    <div class="stat-item" data-reveal data-delay="300">
+      <span class="stat-number" data-counter data-target="24" data-suffix="/7">0</span>
+      <span class="stat-label">Veterinary Support</span>
+    </div>
+  </div>
+</section>
+
+<section id="video-section" aria-labelledby="video-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">The Experience</span>
+    <h2 class="section-title" id="video-heading">Dog Hotel Experience</h2>
+    <p class="section-desc">Watch how dogs enjoy their stay at Living Homes — pure joy, luxury, and unconditional care.</p>
+  </div>
+  <div class="video-wrapper" data-reveal>
+    <div class="video-container">
+      <div class="video-thumb" id="video-thumb" role="button" tabindex="0" aria-label="Play video">
+        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1400&q=80" alt="Happy dogs at Living Homes" class="video-thumb-img" />
+        <div class="video-thumb-overlay"></div>
+        <div class="video-play-btn" aria-hidden="true"><div class="video-play-icon">▶</div></div>
+        <div class="video-thumb-label"><span class="video-thumb-title">▶ &nbsp;Watch Our Story</span></div>
+      </div>
+     <div class="video-responsive-wrap" id="video-iframe-wrap">
+  <iframe id="yt-iframe" src="https://www.youtube.com/embed/L6P3_Asriec" title="Living Homes Dog Hotel" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+  </iframe>
+</div>
+    </div>
+    <div class="video-features">
+      <div class="video-feature-item" data-reveal data-delay="0"><span class="video-feature-icon">🏡</span><span>Luxury Suites</span></div>
+      <div class="video-feature-item" data-reveal data-delay="100"><span class="video-feature-icon">🌿</span><span>Nature Grounds</span></div>
+      <div class="video-feature-item" data-reveal data-delay="200"><span class="video-feature-icon">❤️</span><span>Expert Care</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="booking" aria-labelledby="booking-heading">
+  <div class="booking-inner">
+    <div class="booking-text" data-reveal="left">
+      <span class="section-label">Reservations</span>
+      <h2 class="section-title" id="booking-heading">Reserve Your Dog's Perfect Stay</h2>
+      <p class="section-desc">Check availability in seconds. Our team personally reviews every booking to ensure the best experience.</p>
+      <ul class="booking-features" role="list">
+        <li class="booking-feature"><span class="booking-feature-icon">🔒</span>Secure & easy online booking</li>
+        <li class="booking-feature"><span class="booking-feature-icon">📋</span>Flexible cancellation policy</li>
+        <li class="booking-feature"><span class="booking-feature-icon">💌</span>Daily photo & video updates</li>
+        <li class="booking-feature"><span class="booking-feature-icon">🏥</span>Veterinary check-in included</li>
+      </ul>
+    </div>
+    <div class="booking-form-card" data-reveal="right">
+      <h3 class="booking-form-title">Check Availability</h3>
+      <p class="booking-form-sub">Fill in the details below — calendar starts from March 1, 2026</p>
+      <form id="booking-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="checkin">Check-In Date</label>
+            <input type="text" id="checkin" name="checkin" placeholder="Select check-in date" readonly required />
+          </div>
+          <div class="form-group">
+            <label for="checkout">Check-Out Date</label>
+            <input type="text" id="checkout" name="checkout" placeholder="Select check-out date" readonly required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="dogs">Number of Dogs</label>
+            <select id="dogs" name="dogs" required>
+              <option value="">Select</option>
+              <option value="1">1 Dog</option>
+              <option value="2">2 Dogs</option>
+              <option value="3">3 Dogs</option>
+              <option value="4">4+ Dogs</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pkg">Package</label>
+            <select id="pkg" name="pkg" required>
+              <option value="">Select Package</option>
+              <option value="essential">Essential Stay – 45 JD</option>
+              <option value="comfort">Comfort Suite – 85 JD</option>
+              <option value="luxury">Luxury Villa – 150 JD</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row full">
+          <div class="form-group">
+            <label for="dog-name">Dog's Name</label>
+            <input type="text" id="dog-name" name="dog-name" placeholder="e.g. Buddy, Luna..." />
+          </div>
+        </div>
+        <button type="submit" class="btn-book"><span>🔍 &nbsp;Check Availability</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="services" aria-labelledby="services-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">What We Offer</span>
+    <h2 class="section-title" id="services-heading">Premium Services for Your Dog</h2>
+    <p class="section-desc">Every service is designed to keep your dog happy, healthy, and absolutely adored.</p>
+  </div>
+  <div class="services-grid">
+    <article class="service-card" data-reveal data-delay="0" tabindex="0">
+      <div class="service-icon">🚶</div>
+      <h3 class="service-title">Daily Dog Walking</h3>
+      <p class="service-desc">Structured daily walks in our private nature trails led by certified handlers. Exercise, exploration, and fresh air every single day.</p>
+    </article>
+    <article class="service-card" data-reveal data-delay="80" tabindex="0">
+      <div class="service-icon">🛁</div>
+      <h3 class="service-title">Grooming & Spa</h3>
+      <p class="service-desc">Full grooming sessions including bathing with premium shampoos, blow-dry, nail trimming, and coat styling by professional groomers.</p>
+    </article>
+    <article class="service-card" data-reveal data-delay="160" tabindex="0">
+      <div class="service-icon">📡</div>
+      <h3 class="service-title">24/7 Pet Monitoring</h3>
+      <p class="service-desc">HD live cameras in all suites. Track your dog's activities in real time through our mobile app with daily photo & video reports.</p>
+    </article>
+    <article class="service-card" data-reveal data-delay="0" tabindex="0">
+      <div class="service-icon">🌿</div>
+      <h3 class="service-title">Outdoor Play Area</h3>
+      <p class="service-desc">Spacious, securely fenced outdoor areas with agility equipment, splash pools, and climbing structures for active dogs.</p>
+    </article>
+    <article class="service-card" data-reveal data-delay="80" tabindex="0">
+      <div class="service-icon">🚐</div>
+      <h3 class="service-title">Pick-up & Drop-off</h3>
+      <p class="service-desc">Convenient door-to-door luxury pet transportation in climate-controlled vehicles. Available within 30 km from our location.</p>
+    </article>
+    <article class="service-card" data-reveal data-delay="160" tabindex="0">
+      <div class="service-icon">🏥</div>
+      <h3 class="service-title">24/7 Veterinary Care</h3>
+      <p class="service-desc">Fully-equipped on-site veterinary clinic staffed around the clock. Routine health checks and emergency care always available.</p>
+    </article>
+  </div>
+</section>
+
+<section id="packages" aria-labelledby="packages-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">Accommodation</span>
+    <h2 class="section-title" id="packages-heading">Choose the Perfect Package</h2>
+    <p class="section-desc">Three thoughtfully curated stay options, each offering exceptional comfort and care.</p>
+  </div>
+  <div class="packages-grid">
+    <article class="package-card" data-reveal data-delay="0" tabindex="0">
+      <h3 class="package-name">Essential Stay</h3>
+      <div class="package-price"><span class="package-amount">45</span><span class="package-period">&nbsp;JD / night</span></div>
+      <div class="package-divider"></div>
+      <ul class="package-features" role="list">
+        <li class="package-feature"><span class="package-check">✓</span>Cozy private room (10 m²)</li>
+        <li class="package-feature"><span class="package-check">✓</span>Premium dog food included</li>
+        <li class="package-feature"><span class="package-check">✓</span>2× daily walks</li>
+        <li class="package-feature"><span class="package-check">✓</span>Group play sessions</li>
+        <li class="package-feature"><span class="package-check">✓</span>Daily wellness check</li>
+      </ul>
+      <button class="btn-package" aria-label="Select Essential Stay">Select Package</button>
+    </article>
+    <article class="package-card featured" data-reveal data-delay="100" tabindex="0">
+      <div class="package-badge">Most Popular</div>
+      <h3 class="package-name">Comfort Suite</h3>
+      <div class="package-price"><span class="package-amount">85</span><span class="package-period">&nbsp;JD / night</span></div>
+      <div class="package-divider"></div>
+      <ul class="package-features" role="list">
+        <li class="package-feature"><span class="package-check">✓</span>Spacious suite (20 m²) with sofa</li>
+        <li class="package-feature"><span class="package-check">✓</span>Gourmet meals & treats</li>
+        <li class="package-feature"><span class="package-check">✓</span>3× private walks daily</li>
+        <li class="package-feature"><span class="package-check">✓</span>Grooming session included</li>
+        <li class="package-feature"><span class="package-check">✓</span>Live camera access</li>
+        <li class="package-feature"><span class="package-check">✓</span>Daily photo reports</li>
+      </ul>
+      <button class="btn-package" aria-label="Select Comfort Suite">Select Package</button>
+    </article>
+    <article class="package-card" data-reveal data-delay="200" tabindex="0">
+      <h3 class="package-name">Luxury Villa</h3>
+      <div class="package-price"><span class="package-amount">150</span><span class="package-period">&nbsp;JD / night</span></div>
+      <div class="package-divider"></div>
+      <ul class="package-features" role="list">
+        <li class="package-feature"><span class="package-check">✓</span>Private villa (40 m²) + garden</li>
+        <li class="package-feature"><span class="package-check">✓</span>Personal butler service</li>
+        <li class="package-feature"><span class="package-check">✓</span>Unlimited walks & play</li>
+        <li class="package-feature"><span class="package-check">✓</span>Full spa & massage</li>
+        <li class="package-feature"><span class="package-check">✓</span>Custom meal plan</li>
+        <li class="package-feature"><span class="package-check">✓</span>Pick-up & drop-off included</li>
+        <li class="package-feature"><span class="package-check">✓</span>Priority vet access</li>
+      </ul>
+      <button class="btn-package" aria-label="Select Luxury Villa">Select Package</button>
+    </article>
+  </div>
+</section>
+
+<section id="gallery" aria-labelledby="gallery-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">Photo Gallery</span>
+    <h2 class="section-title" id="gallery-heading">A Glimpse of Happy Lives</h2>
+    <p class="section-desc">Real moments captured at Living Homes — joy, comfort, and unconditional love.</p>
+  </div>
+  <div class="gallery-grid" role="list">
+    <figure class="gallery-item" role="listitem" tabindex="0" aria-label="Happy dog playing outdoors">
+      <img decoding="async" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=900&q=80" alt="Happy golden retriever in sunny garden" loading="lazy" />
+      <div class="gallery-overlay" aria-hidden="true"><div class="gallery-zoom">⊕</div></div>
+    </figure>
+    <figure class="gallery-item" role="listitem" tabindex="0" aria-label="Dogs socializing">
+      <img decoding="async" src="https://images.unsplash.com/photo-1601758124277-3fa74ac18ede?w=600&q=80" alt="Two dogs playing together" loading="lazy" />
+      <div class="gallery-overlay" aria-hidden="true"><div class="gallery-zoom">⊕</div></div>
+    </figure>
+    <figure class="gallery-item" role="listitem" tabindex="0" aria-label="Dog in nature">
+      <img decoding="async" src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=600&q=80" alt="Fluffy dog on a walk in nature" loading="lazy" />
+      <div class="gallery-overlay" aria-hidden="true"><div class="gallery-zoom">⊕</div></div>
+    </figure>
+    <figure class="gallery-item" role="listitem" tabindex="0" aria-label="Dogs walking together">
+      <img decoding="async" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=900&q=80" alt="Two dogs running happily" loading="lazy" />
+      <div class="gallery-overlay" aria-hidden="true"><div class="gallery-zoom">⊕</div></div>
+    </figure>
+    <figure class="gallery-item" role="listitem" tabindex="0" aria-label="Dog grooming">
+      <img decoding="async" src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&q=80" alt="Dog being groomed professionally" loading="lazy" />
+      <div class="gallery-overlay" aria-hidden="true"><div class="gallery-zoom">⊕</div></div>
+    </figure>
+    <figure class="gallery-item" role="listitem" tabindex="0" aria-label="Dog resting">
+      <img decoding="async" src="https://images.unsplash.com/photo-1504595403659-9088ce801e29?w=600&q=80" alt="Contented dog resting on a cosy bed" loading="lazy" />
+      <div class="gallery-overlay" aria-hidden="true"><div class="gallery-zoom">⊕</div></div>
+    </figure>
+  </div>
+</section>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+  <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous">‹</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+  <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next">›</button>
+</div>
+
+<section id="testimonials" aria-labelledby="testimonials-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">Happy Families</span>
+    <h2 class="section-title" id="testimonials-heading">What Dog Parents Say</h2>
+    <p class="section-desc">Real reviews from real owners who trust us with their most precious companions.</p>
+  </div>
+  <div class="testimonials-wrapper">
+    <div class="testimonials-track" role="list">
+      <article class="testimonial-card" role="listitem">
+        <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+        <blockquote class="testimonial-text">"I was nervous leaving Max for the first time, but the team sent us photos every few hours. He came home groomed, happy, and looking absolutely radiant!"</blockquote>
+        <div class="testimonial-author"><div class="testimonial-avatar">👩</div><div><div class="testimonial-name">Sarah Mitchell</div><div class="testimonial-dog">Owner of Max, Golden Retriever</div></div></div>
+      </article>
+      <article class="testimonial-card" role="listitem">
+        <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+        <blockquote class="testimonial-text">"The Luxury Villa package is absolutely worth every penny. Luna had her own garden space and a personal attendant. She literally didn't want to come home!"</blockquote>
+        <div class="testimonial-author"><div class="testimonial-avatar">👨</div><div><div class="testimonial-name">James Harrington</div><div class="testimonial-dog">Owner of Luna, Husky</div></div></div>
+      </article>
+      <article class="testimonial-card" role="listitem">
+        <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+        <blockquote class="testimonial-text">"Professional, warm, and genuinely loving staff. Charlie has complex dietary needs and they handled everything perfectly. Already booked for next month!"</blockquote>
+        <div class="testimonial-author"><div class="testimonial-avatar">👩</div><div><div class="testimonial-name">Emily Chen</div><div class="testimonial-dog">Owner of Charlie, French Bulldog</div></div></div>
+      </article>
+      <article class="testimonial-card" role="listitem">
+        <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+        <blockquote class="testimonial-text">"Living Homes has changed the way I travel. Knowing Bella is safe, exercised, and loved while I'm away makes all the difference in the world."</blockquote>
+        <div class="testimonial-author"><div class="testimonial-avatar">👨</div><div><div class="testimonial-name">David Okafor</div><div class="testimonial-dog">Owner of Bella, Labrador</div></div></div>
+      </article>
+      <article class="testimonial-card" role="listitem">
+        <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+        <blockquote class="testimonial-text">"The live camera access is genius. I watched Rocky playing with other dogs through the app during my entire business trip. Absolute peace of mind!"</blockquote>
+        <div class="testimonial-author"><div class="testimonial-avatar">👩</div><div><div class="testimonial-name">Priya Sharma</div><div class="testimonial-dog">Owner of Rocky, Beagle</div></div></div>
+      </article>
+    </div>
+    <div class="testimonials-controls" role="group" aria-label="Testimonial navigation">
+      <button class="testi-btn" id="testi-prev" aria-label="Previous">‹</button>
+      <div class="testi-dots" role="tablist">
+        <button class="testi-dot active" role="tab" aria-label="1"></button>
+        <button class="testi-dot" role="tab" aria-label="2"></button>
+        <button class="testi-dot" role="tab" aria-label="3"></button>
+      </div>
+      <button class="testi-btn" id="testi-next" aria-label="Next">›</button>
+    </div>
+  </div>
+</section>
+
+<section id="blog" aria-labelledby="blog-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">Dog Stories</span>
+    <h2 class="section-title" id="blog-heading">Tips, Tales & Tails</h2>
+    <p class="section-desc">Expert advice, heartwarming stories, and everything you need to know about caring for your dog.</p>
+  </div>
+  <div class="blog-grid">
+    <article class="blog-card" data-reveal data-delay="0" tabindex="0">
+      <div class="blog-img-wrap"><img decoding="async" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80" alt="Happy dog in a field" loading="lazy" /></div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">Nutrition</span><span class="blog-date">Jan 15, 2026</span></div>
+        <h3 class="blog-title">The Ultimate Guide to Premium Dog Nutrition</h3>
+        <p class="blog-excerpt">Discover what really goes into a balanced, healthy diet for your dog and how proper nutrition extends their lifespan.</p>
+        <span class="blog-read-more">Read Article →</span>
+      </div>
+    </article>
+    <article class="blog-card" data-reveal data-delay="100" tabindex="0">
+      <div class="blog-img-wrap"><img decoding="async" src="https://images.unsplash.com/photo-1601758124277-3fa74ac18ede?w=600&q=80" alt="Dogs playing together" loading="lazy" /></div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">Wellness</span><span class="blog-date">Feb 3, 2026</span></div>
+        <h3 class="blog-title">Why Socialisation is Crucial for Your Dog's Mental Health</h3>
+        <p class="blog-excerpt">Learn why regular play with other dogs dramatically reduces anxiety, builds confidence, and promotes a happier life.</p>
+        <span class="blog-read-more">Read Article →</span>
+      </div>
+    </article>
+    <article class="blog-card" data-reveal data-delay="200" tabindex="0">
+      <div class="blog-img-wrap"><img decoding="async" src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&q=80" alt="Dog being groomed" loading="lazy" /></div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">Grooming</span><span class="blog-date">Mar 10, 2026</span></div>
+        <h3 class="blog-title">Professional Grooming: More Than Just a Pretty Coat</h3>
+        <p class="blog-excerpt">Regular professional grooming prevents skin issues, detects early health problems, and keeps your dog feeling their best.</p>
+        <span class="blog-read-more">Read Article →</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="dog-of-the-day" aria-labelledby="dotd-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">Daily Spotlight</span>
+    <h2 class="section-title" id="dotd-heading">Dog of the Day 🌟</h2>
+    <p class="section-desc">Meet today's featured guest — one lucky pup hand-picked from our happy family.</p>
+  </div>
+  <div class="dotd-card" data-reveal>
+    <div class="dotd-img-wrap">
+      <img id="dotd-img" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=700&q=80" alt="Dog of the day" />
+      <div class="dotd-badge">Today's Star ⭐</div>
+    </div>
+    <div class="dotd-body">
+      <h3 class="dotd-name" id="dotd-name">Buddy</h3>
+      <div class="dotd-meta">
+        <span class="dotd-tag" id="dotd-age">🗓️ 3 years</span>
+        <span class="dotd-tag" id="dotd-breed">🐕 Golden Retriever</span>
+      </div>
+      <p class="dotd-desc" id="dotd-desc">Buddy is the most cheerful guest we've ever had! He loves splashing in the outdoor pool and makes friends with every dog he meets. His tail never stops wagging.</p>
+      <div class="dotd-traits" id="dotd-traits">
+        <span class="dotd-trait">🎾 Playful</span><span class="dotd-trait">💛 Gentle</span><span class="dotd-trait">🏊 Loves Water</span><span class="dotd-trait">😄 Social</span>
+      </div>
+      <button class="dotd-next-btn" id="dotd-next">Meet Another Dog 🐾</button>
+    </div>
+  </div>
+</section>
+
+<section id="mood-checker" aria-labelledby="mood-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">Interactive Tool</span>
+    <h2 class="section-title" id="mood-heading">Dog Mood Checker 🐕</h2>
+    <p class="section-desc">Select how your dog feels today and discover the perfect activities tailored just for them.</p>
+  </div>
+  <div class="mood-wrapper" data-reveal>
+    <div class="mood-picker">
+      <p class="mood-question">How is your dog feeling right now?</p>
+      <div class="mood-options" role="group" aria-label="Select dog mood">
+        <button class="mood-btn" data-mood="happy" aria-pressed="false"><span class="mood-emoji">😄</span><span>Happy</span></button>
+        <button class="mood-btn" data-mood="energetic" aria-pressed="false"><span class="mood-emoji">⚡</span><span>Energetic</span></button>
+        <button class="mood-btn" data-mood="calm" aria-pressed="false"><span class="mood-emoji">😌</span><span>Calm</span></button>
+        <button class="mood-btn" data-mood="hungry" aria-pressed="false"><span class="mood-emoji">🍖</span><span>Hungry</span></button>
+      </div>
+    </div>
+    <div class="mood-result" id="mood-result" style="display:none;" aria-live="polite">
+      <div class="mood-result-inner">
+        <div class="mood-result-emoji" id="mood-emoji"></div>
+        <h3 class="mood-result-title" id="mood-title"></h3>
+        <p class="mood-result-sub" id="mood-sub"></p>
+        <div class="mood-activities" id="mood-activities"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="activity-tracker" aria-labelledby="tracker-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">Daily Routine</span>
+    <h2 class="section-title" id="tracker-heading">Dog Activity Tracker 📋</h2>
+    <p class="section-desc">A snapshot of a typical perfect day for your dog at Living Homes.</p>
+  </div>
+  <div class="tracker-grid" data-reveal>
+    <div class="tracker-item">
+      <div class="tracker-icon">🌅</div>
+      <div class="tracker-info">
+        <div class="tracker-top"><span class="tracker-name">Morning Walk</span><span class="tracker-time">7:00 – 8:00 AM</span></div>
+        <div class="tracker-bar-wrap"><div class="tracker-bar"><div class="tracker-fill" style="width:0%" data-target="85"></div></div><span class="tracker-pct">85%</span></div>
+        <p class="tracker-desc">Energising nature walk on our private trails with a certified handler.</p>
+      </div>
+    </div>
+    <div class="tracker-item">
+      <div class="tracker-icon">🎾</div>
+      <div class="tracker-info">
+        <div class="tracker-top"><span class="tracker-name">Play Time</span><span class="tracker-time">10:00 AM – 12:00 PM</span></div>
+        <div class="tracker-bar-wrap"><div class="tracker-bar"><div class="tracker-fill" style="width:0%" data-target="92"></div></div><span class="tracker-pct">92%</span></div>
+        <p class="tracker-desc">Interactive outdoor play with toys, agility equipment, and friends.</p>
+      </div>
+    </div>
+    <div class="tracker-item">
+      <div class="tracker-icon">✂️</div>
+      <div class="tracker-info">
+        <div class="tracker-top"><span class="tracker-name">Grooming Session</span><span class="tracker-time">2:00 – 3:30 PM</span></div>
+        <div class="tracker-bar-wrap"><div class="tracker-bar"><div class="tracker-fill" style="width:0%" data-target="70"></div></div><span class="tracker-pct">70%</span></div>
+        <p class="tracker-desc">Full professional groom — bath, blow-dry, coat brush and nail trim.</p>
+      </div>
+    </div>
+    <div class="tracker-item">
+      <div class="tracker-icon">🍽️</div>
+      <div class="tracker-info">
+        <div class="tracker-top"><span class="tracker-name">Dinner Time</span><span class="tracker-time">5:30 – 6:00 PM</span></div>
+        <div class="tracker-bar-wrap"><div class="tracker-bar"><div class="tracker-fill" style="width:0%" data-target="100"></div></div><span class="tracker-pct">100%</span></div>
+        <p class="tracker-desc">Gourmet, vet-approved meal prepared fresh daily to your dog's diet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="care-tips" aria-labelledby="tips-heading">
+  <div class="section-header" data-reveal>
+    <span class="section-label">Expert Advice</span>
+    <h2 class="section-title" id="tips-heading">Dog Care Tips 💡</h2>
+    <p class="section-desc">Click below for a fresh expert tip from our veterinary team — a new one every time!</p>
+  </div>
+  <div class="tips-wrapper" data-reveal>
+    <div class="tip-card" id="tip-card" aria-live="polite">
+      <div class="tip-icon" id="tip-icon">💡</div>
+      <blockquote class="tip-text" id="tip-text">Click the button below to reveal your first dog care tip from our expert team.</blockquote>
+      <div class="tip-category" id="tip-category"></div>
+    </div>
+    <button class="btn-tip" id="btn-tip"><span>🐾 &nbsp;Get a Dog Care Tip</span></button>
+  </div>
+</section>
+
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="contact-inner">
+    <div class="contact-info" data-reveal="left">
+      <span class="section-label">Get in Touch</span>
+      <h2 class="section-title" id="contact-heading">We'd Love to Hear From You</h2>
+      <p class="section-desc">Have questions about our services or want to arrange a visit? Reach out — we're here 7 days a week.</p>
+      <div class="contact-details">
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📞</div>
+          <div><div class="contact-detail-title">Phone</div><div class="contact-detail-value"><a href="tel:0797643243">0797643243</a></div></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✉️</div>
+          <div><div class="contact-detail-title">Email</div><div class="contact-detail-value"><a href="mailto:ttttwwiiccee@gmail.com">ttttwwiiccee@gmail.com</a></div></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div><div class="contact-detail-title">Address</div><div class="contact-detail-value">Jordan, Al-Karak, Al-Thaniyah, Noor Al-Hussein</div></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🕐</div>
+          <div><div class="contact-detail-title">Opening Hours</div><div class="contact-detail-value">Mon–Sun: 7:00 AM – 9:00 PM</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form-card" data-reveal="right">
+      <h3 class="booking-form-title">Send a Message</h3>
+      <p class="booking-form-sub">We'll reply within 24 hours</p>
+      <form id="contact-form" novalidate>
+        <div class="contact-form-row">
+          <div class="form-group"><label for="c-name">Your Name</label><input type="text" id="c-name" name="name" placeholder="Jane Smith" required /></div>
+          <div class="form-group"><label for="c-email">Email Address</label><input type="email" id="c-email" name="email" placeholder="jane@example.com" required /></div>
+        </div>
+        <div class="contact-form-row full">
+          <div class="form-group"><label for="c-subject">Subject</label><input type="text" id="c-subject" name="subject" placeholder="How can we help?" /></div>
+        </div>
+        <div class="contact-form-row full">
+          <div class="form-group"><label for="c-message">Message</label><textarea id="c-message" name="message" placeholder="Tell us about your dog and what you need..." required></textarea></div>
+        </div>
+        <button type="submit" class="btn-book"><span>✉️ &nbsp;Send Message</span></button>
+      </form>
+    </div>
+  </div>
+  <div class="map-wrapper" data-reveal>
+    <div class="map-header">
+      <span class="section-label">Find Us</span>
+      <h3 class="map-title">Our Location</h3>
+    </div>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3413.937090757424!2d35.730748!3d31.1670208!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15037751e99b2a05%3A0x56ffa81e6bb1e9ea!2z2YXYr9ix2LPYqSDZhtmI2LEg2KfZhNit2LXZitmGINin2YTYq9in2YbZiNmK2Kkg2YTZhNio2YbYp9iq!5e0!3m2!1sar!2sjo!4v1772650564255!5m2!1sar!2sjo"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Living Homes location" aria-label="Map showing hotel location"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">Living Homes</div>
+        <div class="footer-tagline">Luxury Dog Hotel</div>
+        <p>Where every dog is treated like royalty. Premium boarding, expert care, and a home away from home since 2026.</p>
+        <div class="footer-socials" role="list">
+          <a href="#" class="footer-social" role="listitem" aria-label="Facebook">f</a>
+          <a href="#" class="footer-social" role="listitem" aria-label="Instagram">📷</a>
+          <a href="#" class="footer-social" role="listitem" aria-label="Twitter">𝕏</a>
+          <a href="#" class="footer-social" role="listitem" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Services">
+        <h4>Services</h4>
+        <ul role="list">
+          <li><a href="services.html">Dog Walking</a></li>
+          <li><a href="services.html">Grooming &amp; Spa</a></li>
+          <li><a href="services.html">Pet Monitoring</a></li>
+          <li><a href="services.html">Outdoor Activities</a></li>
+          <li><a href="services.html">Vet Care</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Quick links">
+        <h4>Quick Links</h4>
+        <ul role="list">
+          <li><a href="booking.html">Book a Stay</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="stories.html">Dog Stories</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Information">
+        <h4>Information</h4>
+        <ul role="list">
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="care-tips.html">Care Tips</a></li>
+          <li><a href="mood.html">Mood Checker</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Accessibility</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Living Homes – Luxury Dog Hotel. All rights reserved.</span>
+      <span class="footer-credit">Website created by <strong>Rawaa Al-Dmour</strong></span>
+    </div>
+  </div>
+</footer>
+
+<a id="floating-book" href="booking.html" aria-label="Book now">🐾 &nbsp;Book Now</a>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/nav.js" defer></script>
+</body>
+</html>
